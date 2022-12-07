@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
+// CommonJS
+const Swal = require('sweetalert2');
+
 @Component({
   selector: 'app-home-screen',
   templateUrl: './home-screen.component.html',
-  styleUrls: ['./home-screen.component.scss']
+  styleUrls: ['./home-screen.component.scss'],
 })
 export class HomeScreenComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  callswal() {
+    Swal.fire('Hello world!');
   }
-
 }
