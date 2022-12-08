@@ -1,1 +1,21 @@
-<router-outlet></router-outlet>
+<div class="container-fluid maincointainer1 p-0" style="height: 100%">
+  <div
+    style="
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0)
+      );
+    "
+  >
+    <!-- <div class="row w-100">
+      <div class="col-3">
+        <button type="button" (click)="callswal()">save button</button>
+      </div>
+      <div class="col-9">col-8</div>
+    </div> -->
+    <app-header></app-header>
+    <!-- <app-landingscreen style="width: 100%"></app-landingscreen> -->
+    <router-outlet></router-outlet>
+  </div>
+</div>
