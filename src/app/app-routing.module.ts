@@ -5,9 +5,14 @@ import { LandingscreenComponent } from './landingscreen/landingscreen.component'
 
 const routes: Routes = [
   { path: '', component: HomeScreenComponent, pathMatch: 'full' },
-  { path: 'home', component: HomeScreenComponent },
-  { path: 'home/landingscreen', component: LandingscreenComponent },
-
+  { path: 'home', component: HomeScreenComponent, children:[
+    { path: 'home/landingscreen', component: LandingscreenComponent },
+  ] },
+  {
+    path: 'store',
+    loadChildren: () =>
+      import('./store/store.module').then((m) => m.StoreModule)},
+  
   // { path: '**', component: NotFoundComponent },
 ];
 

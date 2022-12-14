@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { LandingscreenComponent } from './landingscreen/landingscreen.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   imports: [
@@ -19,7 +20,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     BrowserAnimationsModule,
     MatIconModule,
     MatTooltipModule,
+    NgxSpinnerModule
   ],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     HomeScreenComponent,
     LoginScreenComponent,
@@ -29,5 +32,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+ 
 })
 export class AppModule {}

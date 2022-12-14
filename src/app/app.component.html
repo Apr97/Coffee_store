@@ -1,4 +1,4 @@
-<div class="container-fluid maincointainer1 p-0" style="height: 100%">
+<div class="container-fluid maincointainer1 p-0">
   <div
     style="
       background-image: linear-gradient(
@@ -14,8 +14,41 @@
       </div>
       <div class="col-9">col-8</div>
     </div> -->
+    <div style="display:flex;">
+    <div class="col-6">
     <app-header></app-header>
+  </div>
+    <div  class="col-6">
+      <div style="display:flex;text-align: end; padding-right: 20px;margin-top:25px;float: right;">
+        <div class="col-1" style="height: 50px;margin: 0px 15px;">
+          <mat-icon
+            matTooltip="Home"
+            style="font-size: 35px;
+            width: 35px;
+            height: 35px;
+            color: #f4f4f4;" (click)="Homescreen()"
+            >home</mat-icon
+          >
+        </div>
+        <!-- <div class="col-1" style="height: 50px;margin: 0px 15px;">
+          <mat-icon
+            matTooltip="view_list"
+            style="font-size: 40px; width: 40px; height: 40px; color: #f4f4f4"
+            >view_list</mat-icon
+          >
+        </div>
+        <div class="col-1" style="height: 50px;margin: 0px 15px;">
+          <mat-icon
+            matTooltip="Descripion"
+            style="font-size: 40px; width: 40px; height: 40px; color: #f4f4f4"
+            >description</mat-icon
+          >
+        </div> -->
+      </div>
+    </div>
+  </div>
     <!-- <app-landingscreen style="width: 100%"></app-landingscreen> -->
     <router-outlet></router-outlet>
   </div>
 </div>
+<ngx-spinner size="medium" type="ball-scale-multiple"></ngx-spinner>
